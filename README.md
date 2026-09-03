@@ -36,6 +36,6 @@ Este repositório tem como objetivo o desenvolvimento do site institucional da *
 
 ## 📞 Contato
 
- - **Site oficial:** [marciohonorio.com.br](https://marcihonorio.com.br)  
+ - **Site oficial:** [marciohonorio.com.br](https://marciohonorio.com.br)  
  - **E-mail:** marcio@marciohonorio.com.br
  - **Telefone:** +55 (31) 98803-2113
