@@ -4,7 +4,9 @@
     --blue-dark: #1F007A;
     --brown: #300000;
     --brown-strong: #140000;
+    --gree: #008000;
     --ink:#171B22;
+    --ink-faint: #8891A5;
     --paper: #F1F2EC;
     --paper-line: rgba(22, 35, 61, 0.09);
     --paper-line-strong: rgba(22, 35, 61, 0.2);
@@ -24,7 +26,7 @@
     box-sizing: border-box;
 }
 
-/* --------------- GLOBAL --------------- */
+/*--------------- GLOBAL ---------------*/
 
 body {
     background-color: var(--paper);
@@ -48,7 +50,6 @@ body {
     border-radius: var(--radius);
     box-shadow: var(--card-shadow);
 
-    margin: 12px 0;
     padding: 25px;
 }
 .card::before,
@@ -58,7 +59,7 @@ body {
 
     width: 9px;
     height: 9px;
-} /* Elementos em comum entre o ::befor e o ::after*/
+}
 .card::before {
     border-top: 2px solid var(--brown);
     border-left: 2px solid var(--brown);
@@ -96,9 +97,14 @@ h2::before {
     background-color: var(--brown-strong);
 }
 
+:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+}
+
 /* HEADER */
 
-/* --------------- SOBRE NÓS --------------- */
+/*--------------- SOBRE NÓS ---------------*/
 #sobre-nos p {
     font-family: "IBM Plex Sans", sans-serif;
 
@@ -113,7 +119,6 @@ h2::before {
     margin: 25px 0;
 }
 
-/* 'Animando' apenas os cards de Missão, Visão e Valores*/
 #sobre-nos > div > .card {
     transition: all 0.3s ease;
 }
@@ -122,7 +127,7 @@ h2::before {
     transition: all 0.3s ease;
 }
 #sobre-nos > div > .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 #sobre-nos div .card > h3 {
@@ -188,6 +193,128 @@ h2::before {
 
 /* EQUIPE */
 
-/* CONTATO */
+/*--------------- CONTATO ---------------*/
+#contato > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+#contato > div > nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contato > div > nav > a {
+    background-color: var(--white);
+
+    font-family: "Mono";
+    font-size: 15.5px;
+    text-decoration: none;
+    color: var(--ink);
+    
+    border: 1px solid var(--paper-line-strong);
+    border-radius: var(--radius);
+
+    padding: 9px 12px;
+}
+#contato div nav a:hover {
+    color: var(--blue);
+    
+    border-color: var(--blue);
+}
+
+#contato div nav a i {
+    margin-right: 12px;
+
+    font-size: 15px;
+}
+
+.fa-envelope,
+.fa-linkedin {
+    color: var(--blue);
+}
+.fa-whatsapp,
+.fa-phone {
+    color: var(--gree);
+}
+
+#contato div form label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-family: "Mono";
+    font-size: 11.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+}
+
+#contato div form input,
+#contato div form textarea {
+    width: 100%;
+
+    border: 1px solid var(--paper-line-strong);
+    border-radius: var(--radius);
+
+    padding: 10px 12px;
+    margin-bottom: 14px;
+
+    font-size: 14.5px;
+    color: var(--ink);
+}
+
+#contato div form textarea {
+    min-height: 96px;
+
+    resize: vertical;
+}
+
+#contato div form > button {
+    display: inline-flex;
+
+    cursor: pointer;
+
+    padding: 11px 18px;
+    border: 1px solid transparent;
+
+    background-color: var(--blue);
+
+    font-family: "Mono", monospace;
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--white);
+
+    transition: transform 0.12s ease, background 0.15s ease;
+}
+#contato div form > button:hover {
+    background-color: var(--blue-dark);
+}
+#contato div form > button:active {
+    transform: translateY(1px);
+}
+
+
+.erro {
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 14px;
+
+    font-family: "Mono", monospace;
+    font-size: 12px;
+    color: #d93025;
+}
+
+.erro:empty {
+    display: none;
+}
+
+#contato div form input.invalido,
+#contato div form textarea.invalido {
+    border-color: #d93025;
+    background-color: #fdf3f2;
+}
 
 /* FOOTER */

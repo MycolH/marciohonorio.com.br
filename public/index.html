@@ -81,23 +81,31 @@
         </section>
 
         <!-- CONTATO -->
-        <section id="contato">
-            <div id="horario-atendimento">
-                <h2>Horários de Atendimento</h2>
-            </div>
-            <div id="forma-contato">
-                <h2>Contato</h2>
+        <section class="wrap" id="contato">
+            <h2>Contato</h2>
+            <div>
                 <nav>
-
+                    <a href="mailto:marcio@marciohonoriop.com.br" target="_blank"><i class="fas fa-envelope"></i>marcio@marciohonorio.com.br</a>
+                    <a href="https://wa.me/5531988032113" target="_blank"><i class="fab fa-whatsapp"></i>Whatsapp</a>
+                    <a href="https://www.linkedin.com/in/marciohonorio/" target="_blank"><i class="fab fa-linkedin"></i>Linkedin</a>
+                    <a id="telefone-mobile" href="#telefone-form" id="telefone-form"><i class="fas fa-phone"></i>+55 31 98803-2113</a>
                 </nav>
-                <form action="">
-                    
+                <form action="" class="card" novalidate>
+                    <label for="form-name">Nome Completo</label>
+                    <input type="text" id="form-name" name="Name" placeholder="Ex: Nome e Sobrenome" required>
+                    <label for="form-email">E-mail</label>
+                    <input type="email" id="form-email" name="Email" placeholder="Ex: seuemail@email.com" required>
+                    <label for="form-tel">Telefone</label>
+                    <input type="tel" id="form-tel" name="Telephone" placeholder="Ex: _._   _ _ _ _ _-_ _ _ _" maxlength="15" required>
+                    <label for="form-msg">Descreva seu problema</label>
+                    <textarea name="Message" id="form-msg" placeholder="Descreva seu problema aqui" required></textarea>
+                    <button type="submit">Enviar</button>
                 </form>
             </div>
         </section>
     </main>
-    <footer>
-
+    <footer class="wrap">
+        <p>Miguel</p>
     </footer>
 </body>
 </html>

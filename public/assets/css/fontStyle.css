@@ -14,3 +14,8 @@
     src: url(/public/assets/font/IBMPlexSans-VariableFont_wdth\,wght.ttf)
     format("truetype");
 }
+@font-face {
+    font-family: "Mono";
+    src: url(/public/assets/font/JetBrainsMono-VariableFont_wght.ttf)
+    format("truetype");
+}
