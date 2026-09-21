@@ -1,14 +1,136 @@
+:root {
+    --black: #000000;
+    --blue: #2A55E5;
+    --blue-dark: #1F007A;
+    --brown: #300000;
+    --brown-strong: #140000;
+    --ink:#171B22;
+    --paper: #F1F2EC;
+    --paper-line: rgba(22, 35, 61, 0.09);
+    --paper-line-strong: rgba(22, 35, 61, 0.2);
+    --red: #FF0000;
+    --red-light: #D60000;
+    --white: #FFFFFF;
+
+    --card-shadow: 0 1px 2px rgba(22, 35, 61, 0.06);
+
+    --radius: 4px;
+
+}
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-/* GLOBAL */
+/* --------------- GLOBAL --------------- */
+
+body {
+    background-color: var(--paper);
+}
+
+.wrap {
+    max-width: 1080px;
+
+    margin: 0 auto;
+    padding: 26px 56px;
+}
+
+.card {
+    position: relative;
+
+    background-color: var(--white);
+
+    border-width: 2px;
+    border-color: var(--paper-line-strong);
+    border-style: solid;
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+
+    margin: 12px 0;
+    padding: 25px;
+
+    transition: all 0.3s ease;
+}
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+
+    width: 9px;
+    height: 9px;
+
+    transition: all 0.3s ease;
+} /* Elementos em comum entre o ::befor e o ::after*/
+.card::before {
+    border-top: 2px solid var(--brown);
+    border-left: 2px solid var(--brown);
+
+    top: -1px;
+    left: -1px;
+} /* Faz a linha na borda no canto superior esquerdo*/
+.card::after {
+    border-bottom: 2px solid var(--brown);
+    border-right: 2px solid var(--brown);
+
+    bottom: -1px;
+    right: -1px;
+} /* Faz a linha na borda no canto inferior direito*/
+.card:hover{
+    transform: translateY(-5px);
+}
+
+h2 {
+    font-family: "H2", cursive, sans-serif;
+    font-size: 37px;
+    color: var(--ink);
+
+    margin: 12px 0;
+    padding: 7px 0;
+
+}
+h2::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 21px;
+    height: 2px;
+
+    margin-right: 5px;
+
+    background-color: var(--brown-strong);
+}
 
 /* HEADER */
 
-/* SOBRE NÓS */
+/* --------------- SOBRE NÓS --------------- */
+#sobre-nos p {
+    font-family: "IBM Plex Sans", sans-serif;
+
+    text-align: justify;
+}
+
+#sobre-nos > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:13px;
+
+    margin: 25px 0;
+}
+
+#sobre-nos .card > h3 {
+    font-family: "H3", Arial, sans-serif;
+    color: var();
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--blue-dark);
+}
 
 /* AREAS DE ATUAÇÃO */
 
