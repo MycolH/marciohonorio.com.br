@@ -50,8 +50,6 @@ body {
 
     margin: 12px 0;
     padding: 25px;
-
-    transition: all 0.3s ease;
 }
 .card::before,
 .card::after {
@@ -60,8 +58,6 @@ body {
 
     width: 9px;
     height: 9px;
-
-    transition: all 0.3s ease;
 } /* Elementos em comum entre o ::befor e o ::after*/
 .card::before {
     border-top: 2px solid var(--brown);
@@ -69,16 +65,13 @@ body {
 
     top: -1px;
     left: -1px;
-} /* Faz a linha na borda no canto superior esquerdo*/
+}
 .card::after {
     border-bottom: 2px solid var(--brown);
     border-right: 2px solid var(--brown);
 
     bottom: -1px;
     right: -1px;
-} /* Faz a linha na borda no canto inferior direito*/
-.card:hover{
-    transform: translateY(-5px);
 }
 
 h2 {
@@ -98,7 +91,7 @@ h2::before {
     width: 21px;
     height: 2px;
 
-    margin-right: 5px;
+    margin-right: 7px;
 
     background-color: var(--brown-strong);
 }
@@ -120,7 +113,19 @@ h2::before {
     margin: 25px 0;
 }
 
-#sobre-nos .card > h3 {
+/* 'Animando' apenas os cards de Missão, Visão e Valores*/
+#sobre-nos > div > .card {
+    transition: all 0.3s ease;
+}
+#sobre-nos > div > .card::after,
+#sobre-nos > div > .card::before {
+    transition: all 0.3s ease;
+}
+#sobre-nos > div > .card:hover {
+    transform: translateY(-5px);
+}
+
+#sobre-nos div .card > h3 {
     font-family: "H3", Arial, sans-serif;
     color: var();
     text-align: center;
@@ -133,6 +138,51 @@ h2::before {
 }
 
 /* AREAS DE ATUAÇÃO */
+#areas-atuacao ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 15px;
+
+}
+
+#areas-atuacao ul li {
+    list-style: none;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    justify-content: center ;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "IBM Plex Sans";
+    font-size: 15px;
+    letter-spacing: 0.1em;
+
+    padding: 21px;
+
+    width: 210px;
+    height: 108px;
+
+    border: 1px solid var(--paper-line-strong);
+    border-radius: var(--radius);
+    background-color: var(--white);
+
+    transition: all 0.3s ease;
+}
+#areas-atuacao ul li:hover {
+    border-color: var(--blue);
+
+    transform: translateY(-5px);
+}
+
+#areas-atuacao ul li i {
+    margin-bottom: 12px;
+
+    color: var(--brown);
+    font-size: 20px;
+}
 
 /* TRIBUNAIS */
 
