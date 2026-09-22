@@ -5,13 +5,13 @@
     --brown: #300000;
     --brown-strong: #140000;
     --gree: #008000;
+    --gray: #565C64;
     --ink:#171B22;
     --ink-faint: #8891A5;
     --paper: #F1F2EC;
     --paper-line: rgba(22, 35, 61, 0.09);
     --paper-line-strong: rgba(22, 35, 61, 0.2);
     --red: #FF0000;
-    --red-light: #D60000;
     --white: #FFFFFF;
 
     --card-shadow: 0 1px 2px rgba(22, 35, 61, 0.06);
@@ -142,7 +142,7 @@ h2::before {
     border-bottom: 1px solid var(--blue-dark);
 }
 
-/* AREAS DE ATUAÇÃO */
+/*--------------- AREAS DE ATUAÇÃO ---------------*/
 #areas-atuacao ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -185,11 +185,89 @@ h2::before {
 #areas-atuacao ul li i {
     margin-bottom: 12px;
 
-    color: var(--brown);
+    color: var(--ink);
     font-size: 20px;
 }
 
-/* TRIBUNAIS */
+/*--------------- TRIBUNAIS ---------------*/
+#tribunais > p {
+    margin: 12px 0;
+    padding: 21px 0;
+
+    max-width: 50%;
+
+    font-family: "IBM Plex Sans";
+    font-size: 18px;
+    text-align: left;
+    color: var(--gray);
+}
+
+#tribunais div > nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+#tribunais div nav a {
+    background-color: var(--white);
+
+    border: 1px solid var(--paper-line-strong);
+    border-radius: 10px;
+
+    padding: 21px;
+
+    width: 100%;
+
+    font-family: "IBM Plex Sans";
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--black);
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    transition: transform 0.12s ease, background 0.15s ease;
+}
+#tribunais div nav a:hover {
+    transform: translateY(-5px);
+    
+    border-color: var(--blue);
+
+    color: var(--blue);
+}
+#tribunais div nav a span:first-child {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#tribunais div nav a span.long-text {
+    align-items: flex-start;
+}
+
+#tribunais div nav a span.long-text i {
+    position: relative;
+    top: 3px;
+}
+
+#tribunais div nav a i {
+    font-size: 16px;
+
+    color: var(--gray);
+}
+#tribunais div nav a:hover i {
+    color: var(--blue);
+}
+
+#tribunais div nav a span:last-child {
+    margin: 12px 0;
+
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--gray);
+}
 
 /* EQUIPE */
 
@@ -313,8 +391,7 @@ h2::before {
 
 #contato div form input.invalido,
 #contato div form textarea.invalido {
-    border-color: #d93025;
-    background-color: #fdf3f2;
+    border-color: var(--red);
 }
 
 /* FOOTER */
