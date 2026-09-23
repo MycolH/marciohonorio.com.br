@@ -102,6 +102,18 @@ h2::before {
     outline-offset: 2px;
 }
 
+h3 {
+    font-family: "H3", Arial, sans-serif;
+    color: var();
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--blue-dark);
+}
+
 /* HEADER */
 
 /*--------------- SOBRE NÓS ---------------*/
@@ -128,18 +140,6 @@ h2::before {
 }
 #sobre-nos > div > .card:hover {
     transform: translateY(-3px);
-}
-
-#sobre-nos div .card > h3 {
-    font-family: "H3", Arial, sans-serif;
-    color: var();
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-
-    margin-bottom: 15px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--blue-dark);
 }
 
 /*--------------- AREAS DE ATUAÇÃO ---------------*/
@@ -269,7 +269,45 @@ h2::before {
     color: var(--gray);
 }
 
-/* EQUIPE */
+/*--------------- EQUIPE ---------------*/
+#equipe > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+#equipe > div > .card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#equipe > div  img {
+    height: 200px;
+    max-width: 100%;
+
+    display: block;
+
+    border: 1px solid var(--black);
+    border-radius: 51px;
+}
+
+#equipe > div a {
+    font-family: "Mono";
+    font-size: 15.5px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--ink);
+}
+#equipe > div a:hover {
+    color: var(--blue);
+}
+
+#equipe > div a i {
+    margin-right: 12px;
+
+    font-size: 18px;
+}
 
 /*--------------- CONTATO ---------------*/
 #contato > div {
@@ -284,7 +322,8 @@ h2::before {
     gap: 10px;
 }
 
-#contato > div > nav > a {
+#contato > div > nav > a,
+#contato > div > nav > p {
     background-color: var(--white);
 
     font-family: "Mono";
@@ -297,13 +336,15 @@ h2::before {
 
     padding: 9px 12px;
 }
-#contato div nav a:hover {
+#contato div nav a:hover,
+#contato div nav p:hover {
     color: var(--blue);
     
     border-color: var(--blue);
 }
 
-#contato div nav a i {
+#contato div nav a i,
+#contato div nav p i {
     margin-right: 12px;
 
     font-size: 15px;
@@ -316,6 +357,9 @@ h2::before {
 .fa-whatsapp,
 .fa-phone {
     color: var(--gree);
+}
+.fa-map-marker-alt {
+    color: var(--red);
 }
 
 #contato div form label {
