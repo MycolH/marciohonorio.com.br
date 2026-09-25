@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- HEADER -->
     <header>
         <div>
             <div class="logo">
@@ -33,6 +34,7 @@
             </nav>
         </div>
     </header>
+    <!-- MAIN -->
     <main>
         <!-- SOBRE NÓS -->
         <section class="wrap" id="sobre-nos">
@@ -83,7 +85,7 @@
                         <span>(Processo Judicial Eletrônico - Tribunal de Justiça de Minas Gerais)</span>
                     </a>
                     <a href="https://www4.tjmg.jus.br/juridico/sf/" target="_blank">
-                        <span class="long-text">TJMG, 1ª instância (processo físico)<i class="fa-solid fa-arrow-up-right-from-square"></i class="long-text"></span>
+                        <span class="long-text">TJMG, 1ª instância (processo físico)<i class="fa-solid fa-arrow-up-right-from-square"></i></span>
                         <span>(Tribunal de Justiça de Minas Gerais)</span>
                     </a>
                     <a href="https://eproc-consulta-publica-1g.tjmg.jus.br/eproc/externo_controlador.php?acao=processo_consulta_publica" target="_blank">
@@ -157,12 +159,12 @@
         <!-- CONTATO -->
         <section class="wrap" id="contato">
             <h2>Contato</h2>
-            <div>
+            <div id="formas-contato">
                 <nav>
-                    <a href="mailto:marcio@marciohonoriop.com.br" target="_blank"><i class="fas fa-envelope"></i>marcio@marciohonorio.com.br</a>
+                    <a href="mailto:marcio@marciohonorio.com.br"><i class="fas fa-envelope"></i>marcio@marciohonorio.com.br</a>
                     <a href="https://wa.me/5531988032113" target="_blank"><i class="fab fa-whatsapp"></i>Whatsapp</a>
                     <a href="https://www.linkedin.com/in/marciohonorio/" target="_blank"><i class="fab fa-linkedin"></i>Linkedin</a>
-                    <a id="telefone-mobile" href="#telefone-form" id="telefone-form"><i class="fas fa-phone"></i>+55 31 98803-2113</a>
+                    <a id="telefone-mobile" href="#telefone-form"><i class="fas fa-phone"></i>+55 31 98803-2113</a>
                     <p><i class="fas fa-map-marker-alt"></i>R. Mato Grosso, 539 — Barro Preto Belo Horizonte, MG · 30.190-919 Brasil</p>
                 </nav>
                 <form action="" class="card" novalidate>
@@ -177,10 +179,47 @@
                     <button type="submit">Enviar</button>
                 </form>
             </div>
+            <div>
+                <h2>Localização</h2>
+                <div id="map-iframe">
+
+                </div>
+            </div>
         </section>
     </main>
-    <footer class="wrap">
-        <p>Miguel</p>
+    <!-- FOOTER -->
+    <footer>
+        <div>
+            <div class="logo">
+                <img src="assets/img/MH-Logo.png" alt="MH-Advogados">
+            </div>
+            <!-- FOOTER NAV. -->
+            <div id="footer-nav">
+                <h4>Navegação</h4>
+                <nav>
+                    <a href="#sobre-nos">Sobre Nós</a>
+                    <a href="#areas-atuacao">Áreas de Atuação</a>
+                    <a href="#tribunais">Tribunais</a>
+                    <a href="#equipe">Equipe</a>
+                    <a href="#contato">Contato</a>
+                </nav>
+            </div>
+            <!-- FOOTER CONTATO -->
+            <div id="footer-contact">
+                <h4>Contato</h4>
+                <nav>
+                    <a href="mailto:marcio@marciohonorio.com.br"><i class="fas fa-envelope"></i>marcio@marciohonorio.com.br</a>
+                    <a href="https://wa.me/5531988032113" target="_blank"><i class="fab fa-whatsapp"></i>Whatsapp</a>
+                    <a id="telefone-mobile" href="#telefone-form" id="telefone-form"><i class="fas fa-phone"></i>+55 31 98803-2113</a>
+                    <p><i class="fas fa-map-marker-alt"></i>R. Mato Grosso, 539 — Barro Preto Belo Horizonte, MG · 30.190-919 Brasil</p>
+                </nav>
+            </div>
+            <div id="direitos-reservados">
+                <p>© 2026 MH Márcio Honório Sociedade de Advogados · Todos os direitos reservados.</p>
+            </div>
+            <div>
+                <a href="politicasPrivacidade.html">Políticas de Privacidade</a>
+            </div>
     </footer>
 </body>
 </html>
